@@ -1,7 +1,7 @@
 {
   "name": "msgpack-js",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "A msgpack encoder and decoder using ArrayBuffer and DataView",
-  "main": "msgpack.js",
-  "scripts": ["msgpack.js"]
+  "main": "src/msgpack.js",
+  "scripts": ["src/msgpack.js"]
 }

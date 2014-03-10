@@ -1,7 +1,5 @@
 # msgpack for the browser
 
-[![Build Status](https://secure.travis-ci.org/creationix/msgpack-js-browser.png)](http://travis-ci.org/creationix/msgpack-js-browser)
-
 A handwritten msgpack encoder and decoder for Browsers
 
 This is a browser port of https://github.com/creationix/msgpack-js
@@ -17,7 +15,7 @@ This change means that using these new types will render your serialized data
 incompatible with other messagepack implementations that don't have the same
 extension.
 
-There are two new types for storing browser `ArrayBuffer` instances. These work just 
+There are two new types for storing browser `ArrayBuffer` instances. These work just
 like "raw 16" and "raw 32" except they are binary buffers instead of strings.
 
     buffer 16  11011000  0xd8
@@ -26,6 +24,10 @@ like "raw 16" and "raw 32" except they are binary buffers instead of strings.
 Also I've added a type for `undefined` that works just like the `null` type.
 
     undefined  11000100  0xc4
+
+## Int64 support
+
+For supporting big integers [jDataView](https://github.com/jDataView/jDataView) lib is used.
 
 ## Usage
 
@@ -38,4 +40,3 @@ require(['msgpack'], function (msgpack) {
 
 });
 ```
-

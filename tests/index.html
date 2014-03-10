@@ -28,12 +28,13 @@
         <tbody></tbody>
     </table>
 
-    <script src="msgpack.js"></script>
+    <script src="../src/jdataview/src/jdataview.js"></script>
+    <script src="../src/msgpack.js"></script>
     <script>
 
 function Buffer(string) {
     var buffer = new ArrayBuffer(msgpack.utf8ByteCount(string));
-    var view = new DataView(buffer);
+    var view = new jDataView(buffer);
     msgpack.utf8Write(view, 0, string);
     return buffer;
 }
@@ -49,9 +50,11 @@ var tests = [
   0x20000, -0x20000, 0x40000,-0x40000,
   10, 100, 1000, 10000, 100000, 1000000,
   -10, -100, -1000, -10000, -100000, -1000000,
-  'hello', 'world', Buffer("Hello"), Buffer("World"),
+  9007199254740992,
+  'hello', 'world', /*Buffer("Hello"), Buffer("World"),*/
   [1,2,3], [], {name: "Tim", age: 29}, {},
-  {a: 1, b: 2, c: [1, 2, 3]}, [[],[]]
+  {a: 1, b: 2, c: [1, 2, 3]}, [[],[]],
+  {p1: 1, p2: 'string', p3: true, p4: [1, 2, 3], p5: { n1: 2, n2: 'another string', n3: false, n4: {}}}
 ];
 
     var body = document.querySelector("tbody");

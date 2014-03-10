@@ -1,0 +1,3 @@
+[submodule "src/jdataview"]
+	path = src/jdataview
+	url = git@github.com:jDataView/jDataView.git

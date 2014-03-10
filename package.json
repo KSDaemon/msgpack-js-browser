@@ -1,8 +1,8 @@
 {
   "name": "msgpack-js-browser",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A msgpack encoder and decoder using ArrayBuffer and DataView",
-  "main": "msgpack.js",
+  "main": "src/msgpack.js",
   "licenses": [
     {
       "type": "MIT",
@@ -11,6 +11,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/creationix/msgpack-js-browser.git"
+    "url": "https://github.com/KSDaemon/msgpack-js-browser.git"
   }
 }
