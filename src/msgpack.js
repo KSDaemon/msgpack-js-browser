@@ -455,7 +455,7 @@ function encode(value, view, offset) {
 
 	if (type === "number") {
 		// Floating Point
-		if ((value << 0) !== value) {
+		if ((value % 1) !== 0) {
 			view.setUint8(offset, 0xcb);
 			view.setFloat64(offset + 1, value);
 			return 9;
